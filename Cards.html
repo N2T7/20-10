@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>20/10 Hạnh Phúc</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="Logo.ico">
+
+<!--Tất cả các anh trong 1 folder sẽ chạy lần lượt time 7s 1 lần đổi-->
+<script type="text/javascript">
+  window.onload = function(){
+    setTimeout("switch_Image()", 7000);
+  }
+  var current = 1;
+  var num_image = 11;
+  function switch_Image(){
+      current++;
+      document.images['imglc'].src ='img/imglc/lc' + current + '.jpg';
+     if(current < num_image){
+       setTimeout("switch_Image()", 7000);
+     }else if(current == num_image){
+       current = 0;
+       setTimeout("switch_Image()", 7000);
+     }
+ }
+</script>
+
+</head>
+<body style="background-image:url(img/backgr1.jpg)">
+<div class="container-fluid">
+    <div class="row">
+    
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+		<!-- <a href="Content.html"> -->
+        <img  name="imglc" src="img/imglc/lc11.jpg" alt="" style="width:620px; height:570px; margin-top:40px">
+        <!-- </a> -->
+    </div>
+   
+	<div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+		<center>
+            <audio id="time" src="audio/NGỰA Ô.mp3" controls autoplay="autoplay" loop>
+                <source src="audio-file.ogg" type="audio/ogg" />
+                <source src="audio-file.mp3" type="audio/mpeg" />
+            </audio>
+		</center>
+    </div>
+    
+    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+		
+    </div>
+   
+	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+    <!-- <a href="Content.html"> -->
+		<marquee direction="up" scrollamount="2" loop="100"> 
+    		<p style="font-size:30px; color:#00008B;">
+   			Gửi các bạn nữ 11B09, lớp chúng ta đã đi qua được rất nhiều thăng trầm với nhau, đã có những lần giúp đỡ, đồng cảm hay cũng có thể có những xích mích, cãi vã với nhau. Thế nhưng lớp chúng ta vẫn có thể đến được như hiện tại cũng là nhờ những sự đóng góp không lớn thì nhỏ của các bạn. Chính vì lẽ đó, tập thể nam B09 cảm ơn các bạn đã luôn đồng hành cùng bọn tớ trong suốt thời gian vừa qua cũng như là trong hết năm học hiện tại và sắp tới, cảm ơn các bạn vì đã cho bọn tớ những kỉ niệm không thể quên sẽ đi với chúng tớ hết cuộc đời này. Chúng tớ hy vọng lớp chúng ta sẽ luôn có thể đoàn kết với nhau như thế này, tạo một môi trường vui vẻ cho các bạn học. Và cuối cùng, tớ mong rằng không chỉ riêng nữ mà mỗi người trong lớp sẽ luôn được hạnh phúc, CẦU VÀ NGUYỆN CHO AI ĐỌC DÒNG NÀY SẼ LUÔN THỨC DẬY BIẾT RẰNG VẪN CÓ AI ĐÓ YÊU QUÝ VÀ KỲ VỌNG VÀO BẠN, VÀ ƯỚC THÊM RẰNG TRONG SỐ NHỮNG CON NGƯỜI ĐÓ SẼ LUÔN CÓ CHÍNH BẢN THÂN BẠN .
+    		</p>
+		</marquee> 
+        <!-- </a> -->
+    </div>
+
+<!--Chuyển trang sau 198s(Đồng thời hết bài hát-->
+<!-- <script type="text/javascript"> 
+	var jgt = 10; document.getElementById('time').innerHTML = jgt; 
+	function stime(){
+		document.getElementById('time').innerHTML = jgt; 
+		jgt = jgt - 1; 
+		if(jgt == 0){
+			clearInterval(timing); 
+			location = 'Content.html';
+			} 
+		} 
+	var timing = setInterval("stime();",19800); 
+</script> -->
+
+</div> 
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
