@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const fs = require("fs");
+      const path = require("path");
+
+      const directoryPath = path.join(__dirname, "img", "imglc");
+
+      let fileCount = 0;
+
+      fs.readdir(directoryPath, (err, files) => {
+        if (err) {
+          console.error("Unable to scan directory: " + err);
+          return;
+        }
+        fileCount = files.length;
+        // Use fileCount as needed in your code
+      });
+    </script>
+  </body>
+</html>
